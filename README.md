@@ -1,6 +1,6 @@
 # Agent Skills by latestaiagents
 
-**39 professional skills for AI coding agents** — organized by audience so you can find exactly what you need.
+**55 professional skills for AI coding agents** — organized by audience so you can find exactly what you need.
 
 Works with Claude Code, Cursor, Codex, Windsurf, and [35+ other AI agents](https://skills.sh).
 
@@ -25,6 +25,7 @@ npx skills add latestaiagents/agent-skills --all
 | **Everyone** | `npx skills add latestaiagents/agent-skills/skills/safety --all` | 5 safety skills |
 | **Developer** | `npx skills add latestaiagents/agent-skills/skills/developer --all` | 19 dev skills |
 | **Architect/DevOps** | `npx skills add latestaiagents/agent-skills/skills/mlops --all` | 15 advanced skills |
+| **Security Engineer** | `npx skills add latestaiagents/agent-skills/skills/security --all` | 16 security skills |
 
 ---
 
@@ -140,6 +141,42 @@ npx skills add latestaiagents/agent-skills/skills/mlops --all
 
 ---
 
+### Security (For Security Engineers & All Developers)
+
+> Comprehensive security skills including OWASP Top 10 and common security practices — 16 skills total.
+
+```bash
+npx skills add latestaiagents/agent-skills/skills/security --all
+```
+
+#### OWASP Guardian (10 skills)
+
+| Skill | What It Does |
+|-------|--------------|
+| `injection-prevention` | SQL, NoSQL, and command injection prevention |
+| `broken-auth-detector` | Authentication and session security |
+| `sensitive-data-protection` | Encryption, data masking, secure storage |
+| `xxe-prevention` | XML External Entity attack prevention |
+| `access-control-audit` | Authorization and IDOR detection |
+| `security-misconfiguration` | Server, cloud, and app hardening |
+| `xss-prevention` | Cross-site scripting prevention |
+| `insecure-deserialization` | Safe object serialization |
+| `dependency-vulnerability` | Package and supply chain security |
+| `logging-monitoring` | Security event logging and alerting |
+
+#### Common Security (6 skills)
+
+| Skill | What It Does |
+|-------|--------------|
+| `api-security` | REST and GraphQL API security |
+| `secrets-detection` | Find leaked credentials and API keys |
+| `secure-code-review` | Security-focused code review methodology |
+| `csrf-protection` | Cross-site request forgery prevention |
+| `secure-headers` | HTTP security headers (CSP, HSTS, etc.) |
+| `jwt-security` | Secure JWT implementation |
+
+---
+
 ## Installation Options
 
 ### Option 1: Skills CLI (Works with 35+ AI Agents)
@@ -152,6 +189,7 @@ npx skills add latestaiagents/agent-skills --all
 npx skills add latestaiagents/agent-skills/skills/safety --all
 npx skills add latestaiagents/agent-skills/skills/developer --all
 npx skills add latestaiagents/agent-skills/skills/mlops --all
+npx skills add latestaiagents/agent-skills/skills/security --all
 
 # Individual suite
 npx skills add latestaiagents/agent-skills/skills/developer/git-mastery --all
@@ -179,6 +217,7 @@ npx skills add latestaiagents/agent-skills/skills/developer/git-mastery/git-undo
 /plugin install safety@latestaiagents
 /plugin install developer@latestaiagents
 /plugin install mlops@latestaiagents
+/plugin install security@latestaiagents
 
 # Individual suites
 /plugin install git-mastery@latestaiagents
@@ -187,6 +226,8 @@ npx skills add latestaiagents/agent-skills/skills/developer/git-mastery/git-undo
 /plugin install agent-architect@latestaiagents
 /plugin install llmops-guardian@latestaiagents
 /plugin install ai-safety-guardrails@latestaiagents
+/plugin install owasp-guardian@latestaiagents
+/plugin install common-security@latestaiagents
 
 # Everything
 /plugin install latestaiagents-full@latestaiagents
@@ -231,6 +272,9 @@ Skills activate **automatically** based on what you're doing:
 | "Delete all the old log files" | `file-operation-safety` | Shows what will be deleted, asks for explicit confirmation |
 | "Help me design a multi-agent system" | `agent-supervisor-pattern` | Provides architecture patterns and code templates |
 | "Why is this API so expensive?" | `token-cost-analyzer` | Analyzes token usage with current pricing |
+| "Is this code secure?" | `secure-code-review` | Security-focused code review methodology |
+| "Check for SQL injection" | `injection-prevention` | SQL injection detection and prevention |
+| "Review my JWT implementation" | `jwt-security` | JWT security best practices |
 
 **No special commands needed** — just describe what you're doing.
 
@@ -241,15 +285,18 @@ Skills activate **automatically** based on what you're doing:
 ```
 agent-skills/
 ├── skills/
-│   ├── core/                    # Essential safety (5 skills)
+│   ├── safety/                  # Essential safety (5 skills)
 │   │   └── ai-safety-guardrails/
-│   ├── developer/               # For developers (20 skills)
+│   ├── developer/               # For developers (19 skills)
 │   │   ├── git-mastery/
 │   │   ├── code-intelligence/
 │   │   └── debug-detective/
-│   └── advanced/                # For architects (15 skills)
-│       ├── agent-architect/
-│       └── llmops-guardian/
+│   ├── mlops/                   # For architects (15 skills)
+│   │   ├── agent-architect/
+│   │   └── llmops-guardian/
+│   └── security/                # Security skills (16 skills)
+│       ├── owasp-guardian/      # OWASP Top 10 (10 skills)
+│       └── common-security/     # Common practices (6 skills)
 ├── commands/                    # 10 slash commands
 ├── .claude-plugin/              # Plugin configuration
 │   ├── plugin.json

@@ -12,7 +12,7 @@
     {
       "name": "latestaiagents-full",
       "source": "./",
-      "description": "Complete suite: 39 skills + 10 slash commands. Everything you need for professional AI-assisted development.",
+      "description": "Complete suite: 55 skills + 10 slash commands. Everything you need for professional AI-assisted development.",
       "version": "1.0.0",
       "author": {
         "name": "latestaiagents"
@@ -148,6 +148,48 @@
       "license": "MIT",
       "keywords": ["safety", "guardrails", "database", "migrations", "backups"],
       "category": "Safety"
+    },
+    {
+      "name": "security",
+      "source": "./skills/security",
+      "description": "Comprehensive security skills. OWASP Top 10, API security, secrets detection, and secure coding practices. 16 skills total.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["security", "owasp", "xss", "sql-injection", "authentication", "encryption"],
+      "category": "Security"
+    },
+    {
+      "name": "owasp-guardian",
+      "source": "./skills/security/owasp-guardian",
+      "description": "OWASP Top 10 security skills. Injection, auth, XSS, access control, and more. 10 skills covering critical vulnerabilities.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["owasp", "security", "injection", "xss", "authentication", "vulnerabilities"],
+      "category": "Security"
+    },
+    {
+      "name": "common-security",
+      "source": "./skills/security/common-security",
+      "description": "Essential security practices. API security, secrets detection, CSRF protection, secure headers, JWT security. 6 skills.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["api-security", "csrf", "jwt", "secrets", "headers", "code-review"],
+      "category": "Security"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Agent Skills - Development Guide
 
-This is the official skills repository for latestaiagents. It contains 39 professional skills and 10 slash commands for AI coding agents.
+This is the official skills repository for latestaiagents. It contains 55 professional skills and 10 slash commands for AI coding agents.
 
 ## Project Structure
 
@@ -19,9 +19,12 @@ agent-skills/
 │   │   ├── git-mastery/         # Git workflows (6 skills)
 │   │   ├── code-intelligence/   # AI coding (7 skills)
 │   │   └── debug-detective/     # Debugging (6 skills)
-│   └── mlops/                   # For architects/MLOps engineers (15 skills)
-│       ├── agent-architect/     # Multi-agent systems (8 skills)
-│       └── llmops-guardian/     # LLM operations (7 skills)
+│   ├── mlops/                   # For architects/MLOps engineers (15 skills)
+│   │   ├── agent-architect/     # Multi-agent systems (8 skills)
+│   │   └── llmops-guardian/     # LLM operations (7 skills)
+│   └── security/                # Security skills (16 skills)
+│       ├── owasp-guardian/      # OWASP Top 10 (10 skills)
+│       └── common-security/     # Common security (6 skills)
 ├── commands/                    # Slash commands (Claude Code only)
 │   ├── git-undo.md
 │   ├── resolve-conflict.md
@@ -43,6 +46,7 @@ agent-skills/
 | `safety` | `skills/safety/` | Everyone | Safety, guardrails, protection |
 | `developer` | `skills/developer/` | Software developers | Git, debugging, testing |
 | `mlops` | `skills/mlops/` | Architects, DevOps | Multi-agent, LLMOps |
+| `security` | `skills/security/` | Security engineers | OWASP, XSS, JWT, API security |
 
 ### Step 2: Create the Directory Structure
 
