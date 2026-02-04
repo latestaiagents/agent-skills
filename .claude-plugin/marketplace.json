@@ -5,107 +5,149 @@
     "email": "hardikmer@outlook.com"
   },
   "metadata": {
-    "description": "Professional skills and plugins for AI coding agents — Git workflows, debugging, multi-agent architecture, LLMOps, and safety guardrails.",
+    "description": "Professional skills and plugins for AI coding agents — organized by audience for easy discovery.",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "latestaiagents-full",
       "source": "./",
-      "description": "Complete suite: 39 skills + 10 slash commands for Git, debugging, agent architecture, LLMOps, and safety.",
+      "description": "Complete suite: 39 skills + 10 slash commands. Everything you need for professional AI-assisted development.",
       "version": "1.0.0",
       "author": {
         "name": "latestaiagents"
       },
-      "homepage": "https://github.com/latestaiagents/skills",
-      "repository": "https://github.com/latestaiagents/skills",
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
       "license": "MIT",
-      "keywords": ["git", "debugging", "multi-agent", "llmops", "safety", "ai-agents"],
+      "keywords": ["git", "debugging", "multi-agent", "llmops", "safety", "ai-agents", "complete"],
+      "category": "Complete Suite"
+    },
+    {
+      "name": "safety",
+      "source": "./skills/safety",
+      "description": "Essential safety skills. Recommended for everyone. Prevents accidental data loss and destructive operations.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["safety", "guardrails", "essential", "core", "protection"],
+      "category": "Essential"
+    },
+    {
+      "name": "developer",
+      "source": "./skills/developer",
+      "description": "For software developers. Git workflows, code intelligence, and debugging tools. 19 skills total.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["developer", "git", "debugging", "code-review", "testing"],
       "category": "Developer Tools"
     },
     {
+      "name": "mlops",
+      "source": "./skills/mlops",
+      "description": "For architects and platform engineers. Multi-agent systems, LLMOps, and production AI patterns. 15 skills total.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["architecture", "multi-agent", "llmops", "platform", "advanced"],
+      "category": "Advanced"
+    },
+    {
       "name": "git-mastery",
-      "source": "./skills/git-mastery",
+      "source": "./skills/developer/git-mastery",
       "description": "Stop fighting Git. Merge conflicts, undo mistakes, rebase safely, commit messages, branching strategies.",
       "version": "1.0.0",
       "author": {
         "name": "latestaiagents"
       },
-      "homepage": "https://github.com/latestaiagents/skills",
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
       "license": "MIT",
       "keywords": ["git", "merge", "rebase", "commit", "branch"],
-      "category": "Version Control",
-      "strict": false
+      "category": "Version Control"
     },
     {
       "name": "code-intelligence",
-      "source": "./skills/code-intelligence",
+      "source": "./skills/developer/code-intelligence",
       "description": "Ship 10x faster with AI. Context building, code review, refactoring, test generation, debugging workflows.",
       "version": "1.0.0",
       "author": {
         "name": "latestaiagents"
       },
-      "homepage": "https://github.com/latestaiagents/skills",
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
       "license": "MIT",
       "keywords": ["ai", "code-review", "refactoring", "testing", "debugging"],
-      "category": "AI/ML",
-      "strict": false
-    },
-    {
-      "name": "agent-architect",
-      "source": "./skills/agent-architect",
-      "description": "Design multi-agent systems that work. Supervisor patterns, mesh architecture, memory systems, error recovery.",
-      "version": "1.0.0",
-      "author": {
-        "name": "latestaiagents"
-      },
-      "homepage": "https://github.com/latestaiagents/skills",
-      "license": "MIT",
-      "keywords": ["multi-agent", "orchestration", "ai-agents", "architecture"],
-      "category": "AI/ML",
-      "strict": false
+      "category": "AI Coding"
     },
     {
       "name": "debug-detective",
-      "source": "./skills/debug-detective",
+      "source": "./skills/developer/debug-detective",
       "description": "Find bugs in minutes. Error analysis, log forensics, stack traces, performance profiling, dependency conflicts.",
       "version": "1.0.0",
       "author": {
         "name": "latestaiagents"
       },
-      "homepage": "https://github.com/latestaiagents/skills",
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
       "license": "MIT",
       "keywords": ["debugging", "errors", "logs", "performance", "profiling"],
-      "category": "Developer Tools",
-      "strict": false
+      "category": "Debugging"
+    },
+    {
+      "name": "agent-architect",
+      "source": "./skills/mlops/agent-architect",
+      "description": "Design multi-agent systems that work. Supervisor patterns, mesh architecture, memory systems, error recovery.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["multi-agent", "orchestration", "ai-agents", "architecture"],
+      "category": "AI Architecture"
     },
     {
       "name": "llmops-guardian",
-      "source": "./skills/llmops-guardian",
+      "source": "./skills/mlops/llmops-guardian",
       "description": "Production LLM systems done right. Cost analysis, caching, rate limiting, audit logging, security, fallbacks.",
       "version": "1.0.0",
       "author": {
         "name": "latestaiagents"
       },
-      "homepage": "https://github.com/latestaiagents/skills",
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
       "license": "MIT",
       "keywords": ["llmops", "cost", "caching", "rate-limiting", "security", "compliance"],
-      "category": "DevOps",
-      "strict": false
+      "category": "LLMOps"
     },
     {
       "name": "ai-safety-guardrails",
-      "source": "./skills/ai-safety-guardrails",
+      "source": "./skills/safety/ai-safety-guardrails",
       "description": "Never let AI destroy your data. Mandatory confirmations for destructive operations, migration safety, backup protocols.",
       "version": "1.0.0",
       "author": {
         "name": "latestaiagents"
       },
-      "homepage": "https://github.com/latestaiagents/skills",
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
       "license": "MIT",
       "keywords": ["safety", "guardrails", "database", "migrations", "backups"],
-      "category": "Security",
-      "strict": false
+      "category": "Safety"
     }
   ]
 }

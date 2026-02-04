@@ -1,6 +1,12 @@
 # Local Claude Code settings (NOT .claude-plugin which should be committed)
 .claude/
 
+# Agent-specific local directories (created when installing skills)
+.agents/
+.codex/
+.opencode/
+.cursor/
+
 # OS files
 .DS_Store
 Thumbs.db
