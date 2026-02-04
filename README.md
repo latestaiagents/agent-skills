@@ -1,6 +1,6 @@
 # Agent Skills by latestaiagents
 
-**55 professional skills for AI coding agents** — organized by audience so you can find exactly what you need.
+**67 professional skills for AI coding agents** — organized by audience so you can find exactly what you need.
 
 Works with Claude Code, Cursor, Codex, Windsurf, and [35+ other AI agents](https://skills.sh).
 
@@ -24,7 +24,8 @@ npx skills add latestaiagents/agent-skills --all
 |---------|-----------------|--------|
 | **Everyone** | `npx skills add latestaiagents/agent-skills/skills/safety --all` | 5 safety skills |
 | **Developer** | `npx skills add latestaiagents/agent-skills/skills/developer --all` | 19 dev skills |
-| **Architect/DevOps** | `npx skills add latestaiagents/agent-skills/skills/mlops --all` | 15 advanced skills |
+| **Architect/DevOps** | `npx skills add latestaiagents/agent-skills/skills/mlops --all` | 20 agent/LLMOps skills |
+| **RAG Engineer** | `npx skills add latestaiagents/agent-skills/skills/rag-architect --all` | 7 RAG skills |
 | **Security Engineer** | `npx skills add latestaiagents/agent-skills/skills/security --all` | 16 security skills |
 
 ---
@@ -108,13 +109,13 @@ npx skills add latestaiagents/agent-skills/skills/developer --all
 
 ### MLOps (For Architects & Platform Engineers)
 
-> Multi-agent systems, LLMOps, and production AI patterns — 15 skills total.
+> Multi-agent systems, LLMOps, and production AI patterns — 20 skills total.
 
 ```bash
 npx skills add latestaiagents/agent-skills/skills/mlops --all
 ```
 
-#### Agent Architect (8 skills)
+#### Agent Architect (13 skills)
 
 | Skill | What It Does |
 |-------|--------------|
@@ -126,6 +127,11 @@ npx skills add latestaiagents/agent-skills/skills/mlops --all
 | `agent-error-recovery` | Circuit breakers, retry policies, graceful degradation |
 | `agent-cost-budgeting` | Token allocation across agent swarms |
 | `agent-testing-harness` | Unit and integration testing for agents |
+| `langgraph-workflows` | LangGraph 1.0 state machines and graph patterns |
+| `durable-state-patterns` | Persistent agent state across failures/restarts |
+| `human-in-loop-agents` | Approval workflows and agent supervision |
+| `agent-checkpointing` | Recovery, replay, and debugging patterns |
+| `a2a-protocols` | Agent-to-Agent communication and MCP integration |
 
 #### LLMOps Guardian (7 skills)
 
@@ -138,6 +144,26 @@ npx skills add latestaiagents/agent-skills/skills/mlops --all
 | `ai-audit-logging` | EU AI Act compliant audit trails |
 | `prompt-injection-guard` | Input validation, canary tokens, output filtering |
 | `llm-fallback-chains` | Multi-provider failover strategies |
+
+---
+
+### RAG Architect (For AI/ML Engineers)
+
+> Build production-ready RAG systems with 2026 best practices — 7 skills total.
+
+```bash
+npx skills add latestaiagents/agent-skills/skills/rag-architect --all
+```
+
+| Skill | What It Does |
+|-------|--------------|
+| `hybrid-retrieval` | Vector + keyword search with RRF fusion and reranking |
+| `chunking-strategies` | Optimal chunking: semantic, parent-child, late chunking |
+| `graphrag-patterns` | Knowledge graph + RAG for multi-hop reasoning |
+| `agentic-rag` | Agent-driven retrieval with planning and reflection |
+| `corrective-rag` | Self-healing RAG with document grading and fallbacks |
+| `rag-evaluation` | RAGAS metrics, testing, and benchmarking |
+| `production-rag-checklist` | End-to-end production deployment guide |
 
 ---
 
@@ -189,6 +215,7 @@ npx skills add latestaiagents/agent-skills --all
 npx skills add latestaiagents/agent-skills/skills/safety --all
 npx skills add latestaiagents/agent-skills/skills/developer --all
 npx skills add latestaiagents/agent-skills/skills/mlops --all
+npx skills add latestaiagents/agent-skills/skills/rag-architect --all
 npx skills add latestaiagents/agent-skills/skills/security --all
 
 # Individual suite
@@ -272,9 +299,11 @@ Skills activate **automatically** based on what you're doing:
 | "Delete all the old log files" | `file-operation-safety` | Shows what will be deleted, asks for explicit confirmation |
 | "Help me design a multi-agent system" | `agent-supervisor-pattern` | Provides architecture patterns and code templates |
 | "Why is this API so expensive?" | `token-cost-analyzer` | Analyzes token usage with current pricing |
+| "Build a RAG system" | `hybrid-retrieval` | Vector + keyword search with reranking |
+| "My RAG gives wrong answers" | `corrective-rag` | Self-healing RAG with document grading |
+| "Implement GraphRAG" | `graphrag-patterns` | Knowledge graph integration for multi-hop reasoning |
 | "Is this code secure?" | `secure-code-review` | Security-focused code review methodology |
 | "Check for SQL injection" | `injection-prevention` | SQL injection detection and prevention |
-| "Review my JWT implementation" | `jwt-security` | JWT security best practices |
 
 **No special commands needed** — just describe what you're doing.
 
@@ -308,9 +337,17 @@ agent-skills/
 │   │   ├── git-mastery/
 │   │   ├── code-intelligence/
 │   │   └── debug-detective/
-│   ├── mlops/                   # For architects (15 skills)
-│   │   ├── agent-architect/
-│   │   └── llmops-guardian/
+│   ├── mlops/                   # For architects (20 skills)
+│   │   ├── agent-architect/     # Multi-agent + LangGraph (13 skills)
+│   │   └── llmops-guardian/     # LLM operations (7 skills)
+│   ├── rag-architect/           # RAG systems (7 skills)
+│   │   ├── hybrid-retrieval/
+│   │   ├── chunking-strategies/
+│   │   ├── graphrag-patterns/
+│   │   ├── agentic-rag/
+│   │   ├── corrective-rag/
+│   │   ├── rag-evaluation/
+│   │   └── production-rag-checklist/
 │   └── security/                # Security skills (16 skills)
 │       ├── owasp-guardian/      # OWASP Top 10 (10 skills)
 │       └── common-security/     # Common practices (6 skills)

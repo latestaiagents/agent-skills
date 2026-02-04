@@ -1,6 +1,6 @@
 # Agent Skills - Development Guide
 
-This is the official skills repository for latestaiagents. It contains 55 professional skills and 10 slash commands for AI coding agents.
+This is the official skills repository for latestaiagents. It contains 67 professional skills and 10 slash commands for AI coding agents.
 
 ## Project Structure
 
@@ -19,9 +19,10 @@ agent-skills/
 │   │   ├── git-mastery/         # Git workflows (6 skills)
 │   │   ├── code-intelligence/   # AI coding (7 skills)
 │   │   └── debug-detective/     # Debugging (6 skills)
-│   ├── mlops/                   # For architects/MLOps engineers (15 skills)
-│   │   ├── agent-architect/     # Multi-agent systems (8 skills)
+│   ├── mlops/                   # For architects/MLOps engineers (20 skills)
+│   │   ├── agent-architect/     # Multi-agent + LangGraph (13 skills)
 │   │   └── llmops-guardian/     # LLM operations (7 skills)
+│   ├── rag-architect/           # RAG systems (7 skills)
 │   └── security/                # Security skills (16 skills)
 │       ├── owasp-guardian/      # OWASP Top 10 (10 skills)
 │       └── common-security/     # Common security (6 skills)
@@ -45,7 +46,8 @@ agent-skills/
 |----------|------|----------|----------|
 | `safety` | `skills/safety/` | Everyone | Safety, guardrails, protection |
 | `developer` | `skills/developer/` | Software developers | Git, debugging, testing |
-| `mlops` | `skills/mlops/` | Architects, DevOps | Multi-agent, LLMOps |
+| `mlops` | `skills/mlops/` | Architects, DevOps | Multi-agent, LangGraph, LLMOps |
+| `rag-architect` | `skills/rag-architect/` | AI/ML Engineers | RAG, retrieval, embeddings |
 | `security` | `skills/security/` | Security engineers | OWASP, XSS, JWT, API security |
 
 ### Step 2: Create the Directory Structure
