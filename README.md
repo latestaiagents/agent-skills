@@ -201,7 +201,7 @@ npx skills add latestaiagents/agent-skills/skills/developer/git-mastery/git-undo
 ### Option 2: Claude Code Plugin (Includes Slash Commands)
 
 ```bash
-/plugin add latestaiagents/agent-skills
+/plugin install latestaiagents/agent-skills
 ```
 
 ### Option 3: Marketplace (Browse & Install Individually)
