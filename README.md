@@ -280,6 +280,23 @@ Skills activate **automatically** based on what you're doing:
 
 ---
 
+## Staying Updated
+
+Check for skill updates and keep your installation current:
+
+```bash
+# Check for available updates
+npx skills check
+
+# Update all installed skills to latest versions
+npx skills update
+
+# List your installed skills
+npx skills list
+```
+
+---
+
 ## Directory Structure
 
 ```
