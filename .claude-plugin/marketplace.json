@@ -1,0 +1,111 @@
+{
+  "name": "latestaiagents",
+  "owner": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "metadata": {
+    "description": "Professional skills and plugins for AI coding agents — Git workflows, debugging, multi-agent architecture, LLMOps, and safety guardrails.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "latestaiagents-full",
+      "source": "./",
+      "description": "Complete suite: 39 skills + 10 slash commands for Git, debugging, agent architecture, LLMOps, and safety.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/skills",
+      "repository": "https://github.com/latestaiagents/skills",
+      "license": "MIT",
+      "keywords": ["git", "debugging", "multi-agent", "llmops", "safety", "ai-agents"],
+      "category": "Developer Tools"
+    },
+    {
+      "name": "git-mastery",
+      "source": "./skills/git-mastery",
+      "description": "Stop fighting Git. Merge conflicts, undo mistakes, rebase safely, commit messages, branching strategies.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/skills",
+      "license": "MIT",
+      "keywords": ["git", "merge", "rebase", "commit", "branch"],
+      "category": "Version Control",
+      "strict": false
+    },
+    {
+      "name": "code-intelligence",
+      "source": "./skills/code-intelligence",
+      "description": "Ship 10x faster with AI. Context building, code review, refactoring, test generation, debugging workflows.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/skills",
+      "license": "MIT",
+      "keywords": ["ai", "code-review", "refactoring", "testing", "debugging"],
+      "category": "AI/ML",
+      "strict": false
+    },
+    {
+      "name": "agent-architect",
+      "source": "./skills/agent-architect",
+      "description": "Design multi-agent systems that work. Supervisor patterns, mesh architecture, memory systems, error recovery.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/skills",
+      "license": "MIT",
+      "keywords": ["multi-agent", "orchestration", "ai-agents", "architecture"],
+      "category": "AI/ML",
+      "strict": false
+    },
+    {
+      "name": "debug-detective",
+      "source": "./skills/debug-detective",
+      "description": "Find bugs in minutes. Error analysis, log forensics, stack traces, performance profiling, dependency conflicts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/skills",
+      "license": "MIT",
+      "keywords": ["debugging", "errors", "logs", "performance", "profiling"],
+      "category": "Developer Tools",
+      "strict": false
+    },
+    {
+      "name": "llmops-guardian",
+      "source": "./skills/llmops-guardian",
+      "description": "Production LLM systems done right. Cost analysis, caching, rate limiting, audit logging, security, fallbacks.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/skills",
+      "license": "MIT",
+      "keywords": ["llmops", "cost", "caching", "rate-limiting", "security", "compliance"],
+      "category": "DevOps",
+      "strict": false
+    },
+    {
+      "name": "ai-safety-guardrails",
+      "source": "./skills/ai-safety-guardrails",
+      "description": "Never let AI destroy your data. Mandatory confirmations for destructive operations, migration safety, backup protocols.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/skills",
+      "license": "MIT",
+      "keywords": ["safety", "guardrails", "database", "migrations", "backups"],
+      "category": "Security",
+      "strict": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "latestaiagents",
+  "description": "39 professional skills + 10 slash commands for AI coding agents — Git workflows, debugging, multi-agent architecture, LLMOps, and safety guardrails.",
+  "version": "1.0.0",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/skills",
+  "repository": "https://github.com/latestaiagents/skills",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "debugging",
+    "multi-agent",
+    "llmops",
+    "safety",
+    "ai-agents",
+    "developer-tools"
+  ]
+}

@@ -1,0 +1,16 @@
+# Local Claude Code settings (NOT .claude-plugin which should be committed)
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
