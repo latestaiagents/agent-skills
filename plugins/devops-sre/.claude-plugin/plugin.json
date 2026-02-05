@@ -1,0 +1,28 @@
+{
+  "name": "devops-sre",
+  "version": "1.0.0",
+  "description": "Complete DevOps/SRE toolkit: incident response, observability, reliability engineering, on-call management, and automation. The most comprehensive open-source DevOps plugin available.",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/agent-skills",
+  "repository": "https://github.com/latestaiagents/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "devops",
+    "sre",
+    "incident-response",
+    "observability",
+    "on-call",
+    "runbooks",
+    "kubernetes",
+    "aws",
+    "datadog",
+    "pagerduty"
+  ],
+  "category": "DevOps & SRE",
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcp": "./.mcp.json"
+}
