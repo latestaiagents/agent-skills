@@ -1,32 +1,55 @@
 # Agent Skills by latestaiagents
 
-**67 professional skills for AI coding agents** — organized by audience so you can find exactly what you need.
+**67 professional skills + 7 full-featured plugins for AI coding agents** — organized by audience so you can find exactly what you need.
 
-Works with Claude Code, Cursor, Codex, Windsurf, and [35+ other AI agents](https://skills.sh).
+Works with **Claude Code**, **Claude Cowork**, Cursor, Codex, Windsurf, and [35+ other AI agents](https://skills.sh).
 
 ```bash
+# Cross-platform skills (works with any AI agent)
 npx skills add latestaiagents/agent-skills --all
+
+# Claude Code / Cowork plugins (with MCP integrations)
+/plugin marketplace add latestaiagents/agent-skills
+/plugin install devops-sre@latestaiagents-agent-skills
 ```
 
 ---
 
 ## Quick Start
 
-### Install Everything (Recommended)
+### Option 1: Skills CLI (Cross-Platform)
+
+Works with Claude Code, Cursor, Codex, Windsurf, Cline, Aider, and 35+ other AI agents.
 
 ```bash
 npx skills add latestaiagents/agent-skills --all
 ```
 
+### Option 2: Claude Code / Cowork Plugins
+
+Full plugins with **MCP tool integrations** and **slash commands**. Works with Claude Code CLI and Claude Cowork desktop app.
+
+```bash
+# Step 1: Add our marketplace
+/plugin marketplace add latestaiagents/agent-skills
+
+# Step 2: Install plugins you need
+/plugin install devops-sre@latestaiagents-agent-skills
+/plugin install qa-testing@latestaiagents-agent-skills
+/plugin install hr-people-ops@latestaiagents-agent-skills
+```
+
 ### Install by Audience
 
-| You Are | Install Command | Skills |
-|---------|-----------------|--------|
-| **Everyone** | `npx skills add latestaiagents/agent-skills/skills/safety --all` | 5 safety skills |
-| **Developer** | `npx skills add latestaiagents/agent-skills/skills/developer --all` | 19 dev skills |
-| **Architect/DevOps** | `npx skills add latestaiagents/agent-skills/skills/mlops --all` | 20 agent/LLMOps skills |
-| **RAG Engineer** | `npx skills add latestaiagents/agent-skills/skills/rag-architect --all` | 7 RAG skills |
-| **Security Engineer** | `npx skills add latestaiagents/agent-skills/skills/security --all` | 16 security skills |
+| You Are | Skills CLI | Claude Plugin |
+|---------|-----------|---------------|
+| **Everyone** | `npx skills add latestaiagents/agent-skills/skills/safety --all` | `/plugin install safety@latestaiagents-agent-skills` |
+| **Developer** | `npx skills add latestaiagents/agent-skills/skills/developer --all` | `/plugin install developer-toolkit@latestaiagents-agent-skills` |
+| **DevOps/SRE** | `npx skills add latestaiagents/agent-skills/skills/mlops --all` | `/plugin install devops-sre@latestaiagents-agent-skills` |
+| **RAG Engineer** | `npx skills add latestaiagents/agent-skills/skills/rag-architect --all` | `/plugin install rag-plugin@latestaiagents-agent-skills` |
+| **Security Engineer** | `npx skills add latestaiagents/agent-skills/skills/security --all` | `/plugin install security-guardian@latestaiagents-agent-skills` |
+| **QA/Testing** | — | `/plugin install qa-testing@latestaiagents-agent-skills` |
+| **HR/People Ops** | — | `/plugin install hr-people-ops@latestaiagents-agent-skills` |
 
 ---
 
@@ -203,9 +226,75 @@ npx skills add latestaiagents/agent-skills/skills/security --all
 
 ---
 
-## Installation Options
+## Claude Code / Cowork Plugins (With MCP)
 
-### Option 1: Skills CLI (Works with 35+ AI Agents)
+These 7 plugins include **MCP tool integrations** for connecting to external services like Datadog, PagerDuty, Jira, Pinecone, and more.
+
+> **Note**: For complete plugin documentation, see the [official Claude Code plugins guide](https://code.claude.com/docs/en/plugins).
+
+### Available Plugins
+
+| Plugin | Skills | Commands | MCP Integrations |
+|--------|--------|----------|------------------|
+| **devops-sre** | 8 | 6 | Datadog, PagerDuty, AWS, Kubernetes, Prometheus |
+| **rag-plugin** | 7 | 3 | Pinecone, Weaviate, Qdrant, Neo4j, Elasticsearch |
+| **security-guardian** | 10 | 2 | Snyk, Semgrep, Trivy, Vault, GitHub Security |
+| **agent-plugin** | 13 | 2 | LangSmith, Redis, PostgreSQL, OpenAI |
+| **developer-toolkit** | 19 | 2 | GitHub, GitLab, Jira, Linear, Sentry |
+| **hr-people-ops** | 6 | 2 | Greenhouse, Lever, Workday, BambooHR |
+| **qa-testing** | 6 | 3 | TestRail, Xray, BrowserStack, Jira |
+
+### Plugin Installation
+
+```bash
+# Step 1: Add our marketplace (one-time)
+/plugin marketplace add latestaiagents/agent-skills
+
+# Step 2: Install plugins
+/plugin install devops-sre@latestaiagents-agent-skills
+/plugin install rag-plugin@latestaiagents-agent-skills
+/plugin install security-guardian@latestaiagents-agent-skills
+/plugin install agent-plugin@latestaiagents-agent-skills
+/plugin install developer-toolkit@latestaiagents-agent-skills
+/plugin install hr-people-ops@latestaiagents-agent-skills
+/plugin install qa-testing@latestaiagents-agent-skills
+```
+
+### Plugin Features
+
+Each plugin includes:
+- **Skills**: Auto-activated based on context
+- **Slash Commands**: Quick access to common workflows (e.g., `/incident-response`)
+- **MCP Configs**: Pre-configured connections to external tools (optional, requires your API keys)
+
+### MCP Setup
+
+After installing a plugin, configure MCP integrations:
+
+1. Open the plugin's `.mcp.json` file
+2. Add your API keys for the services you use
+3. All MCP integrations are marked `optional: true` — only enable what you need
+
+Example (DevOps SRE plugin):
+```json
+{
+  "mcpServers": {
+    "datadog": {
+      "command": "npx",
+      "args": ["-y", "@datadog/mcp-server"],
+      "env": { "DD_API_KEY": "your-key", "DD_APP_KEY": "your-key" }
+    }
+  }
+}
+```
+
+---
+
+## Installation Options (Detailed)
+
+### Option 1: Skills CLI (Cross-Platform)
+
+Works with Claude Code, Cursor, Codex, Windsurf, Cline, Aider, and 35+ other AI agents.
 
 ```bash
 # Everything
@@ -225,63 +314,90 @@ npx skills add latestaiagents/agent-skills/skills/developer/git-mastery --all
 npx skills add latestaiagents/agent-skills/skills/developer/git-mastery/git-undo-wizard
 ```
 
-### Option 2: Claude Code Plugin (Includes Slash Commands)
+### Option 2: Claude Marketplace (Recommended for Claude Code/Cowork)
 
 ```bash
-/plugin install latestaiagents/agent-skills
-```
-
-### Option 3: Marketplace (Browse & Install Individually)
-
-**Step 1: Add the marketplace**
-```bash
+# Step 1: Add the marketplace (one-time)
 /plugin marketplace add latestaiagents/agent-skills
+
+# Step 2: Browse available plugins
+/plugin marketplace list
+
+# Step 3: Install what you need
+/plugin install devops-sre@latestaiagents-agent-skills
+/plugin install qa-testing@latestaiagents-agent-skills
+
+# Skills-only (no MCP)
+/plugin install safety@latestaiagents-agent-skills
+/plugin install git-mastery@latestaiagents-agent-skills
+/plugin install owasp-guardian@latestaiagents-agent-skills
 ```
 
-**Step 2: Install what you need**
+### Option 3: Direct Plugin Install
+
 ```bash
-# By category
-/plugin install safety@latestaiagents
-/plugin install developer@latestaiagents
-/plugin install mlops@latestaiagents
-/plugin install security@latestaiagents
-
-# Individual suites
-/plugin install git-mastery@latestaiagents
-/plugin install code-intelligence@latestaiagents
-/plugin install debug-detective@latestaiagents
-/plugin install agent-architect@latestaiagents
-/plugin install llmops-guardian@latestaiagents
-/plugin install ai-safety-guardrails@latestaiagents
-/plugin install owasp-guardian@latestaiagents
-/plugin install common-security@latestaiagents
-
-# Everything
-/plugin install latestaiagents-full@latestaiagents
+# Install full plugin directly
+/plugin install latestaiagents/agent-skills/plugins/devops-sre
+/plugin install latestaiagents/agent-skills/plugins/qa-testing
 ```
 
 ---
 
-## Slash Commands (Claude Code Only)
+## Slash Commands (Claude Code / Cowork)
 
-After installing the plugin, you get **10 powerful slash commands**:
+After installing plugins, you get **20+ powerful slash commands**:
 
+### DevOps/SRE Commands
 | Command | What It Does |
 |---------|--------------|
-| `/git-undo` | Recover from any Git mistake — reset, rebase, force push |
-| `/resolve-conflict` | Systematic merge conflict resolution |
-| `/safety-check` | Run safety checks before destructive operations |
-| `/migration-check` | Analyze database migrations for risks |
-| `/design-agent` | Design multi-agent system architectures |
-| `/cost-analyze` | Analyze and optimize LLM API costs |
+| `/incident-response` | Start incident workflow with severity assessment |
+| `/runbook` | Generate or execute operational runbooks |
+| `/postmortem` | Create blameless postmortem documents |
+| `/slo-check` | Check SLO/SLI compliance and error budgets |
+| `/on-call` | On-call handoff and escalation workflows |
+| `/k8s-debug` | Debug Kubernetes pods, deployments, services |
+
+### RAG Commands
+| Command | What It Does |
+|---------|--------------|
+| `/build-rag` | Design and implement RAG pipelines |
+| `/rag-debug` | Debug RAG retrieval quality issues |
+| `/eval-rag` | Evaluate RAG system with RAGAS metrics |
+
+### Security Commands
+| Command | What It Does |
+|---------|--------------|
+| `/security-scan` | Run security analysis on code |
+| `/fix-vulnerability` | Get remediation for vulnerabilities |
+
+### Developer Commands
+| Command | What It Does |
+|---------|--------------|
+| `/git-undo` | Recover from any Git mistake |
 | `/debug-this` | Structured debugging workflow |
-| `/review-ai-code` | Review AI-generated code for bugs and security |
-| `/build-context` | Create optimal CLAUDE.md for your codebase |
-| `/explain-code` | Generate clear explanations for complex code |
+
+### QA/Testing Commands
+| Command | What It Does |
+|---------|--------------|
+| `/write-test-cases` | Generate comprehensive test cases |
+| `/test-plan` | Create test strategy documents |
+| `/bug-report` | Structure actionable bug reports |
+
+### HR/People Ops Commands
+| Command | What It Does |
+|---------|--------------|
+| `/write-job-description` | Create inclusive job descriptions |
+| `/performance-review` | Write effective performance reviews |
+
+### Agent Architect Commands
+| Command | What It Does |
+|---------|--------------|
+| `/design-agent` | Design multi-agent architectures |
+| `/debug-agent` | Debug agent workflows and state |
 
 **Usage:**
 ```
-/migration-check
+/incident-response
 ```
 
 The command guides you step-by-step through the workflow.
@@ -330,7 +446,7 @@ npx skills list
 
 ```
 agent-skills/
-├── skills/
+├── skills/                      # Cross-platform skills (via skills.sh)
 │   ├── safety/                  # Essential safety (5 skills)
 │   │   └── ai-safety-guardrails/
 │   ├── developer/               # For developers (19 skills)
@@ -341,20 +457,33 @@ agent-skills/
 │   │   ├── agent-architect/     # Multi-agent + LangGraph (13 skills)
 │   │   └── llmops-guardian/     # LLM operations (7 skills)
 │   ├── rag-architect/           # RAG systems (7 skills)
-│   │   ├── hybrid-retrieval/
-│   │   ├── chunking-strategies/
-│   │   ├── graphrag-patterns/
-│   │   ├── agentic-rag/
-│   │   ├── corrective-rag/
-│   │   ├── rag-evaluation/
-│   │   └── production-rag-checklist/
 │   └── security/                # Security skills (16 skills)
 │       ├── owasp-guardian/      # OWASP Top 10 (10 skills)
 │       └── common-security/     # Common practices (6 skills)
-├── commands/                    # 10 slash commands
-├── .claude-plugin/              # Plugin configuration
+│
+├── plugins/                     # Claude Code / Cowork plugins (with MCP)
+│   ├── devops-sre/              # DevOps/SRE (8 skills, 6 commands)
+│   │   ├── .claude-plugin/
+│   │   ├── .mcp.json            # Datadog, PagerDuty, AWS, K8s
+│   │   ├── commands/
+│   │   └── skills/
+│   ├── rag-architect/           # RAG (7 skills, 3 commands)
+│   │   └── .mcp.json            # Pinecone, Weaviate, Neo4j
+│   ├── security-guardian/       # Security (10 skills, 2 commands)
+│   │   └── .mcp.json            # Snyk, Semgrep, Trivy, Vault
+│   ├── agent-architect/         # Multi-agent (13 skills, 2 commands)
+│   │   └── .mcp.json            # LangSmith, Redis
+│   ├── developer-toolkit/       # Developer (19 skills, 2 commands)
+│   │   └── .mcp.json            # GitHub, Jira, Sentry
+│   ├── hr-people-ops/           # HR (6 skills, 2 commands)
+│   │   └── .mcp.json            # Greenhouse, Lever, Workday
+│   └── qa-testing/              # QA (6 skills, 3 commands)
+│       └── .mcp.json            # TestRail, BrowserStack
+│
+├── commands/                    # Base slash commands
+├── .claude-plugin/              # Root plugin configuration
 │   ├── plugin.json
-│   └── marketplace.json
+│   └── marketplace.json         # All plugins listed here
 ├── CLAUDE.md                    # AI context file
 └── README.md
 ```
@@ -384,6 +513,35 @@ See [CLAUDE.md](CLAUDE.md) for development guidelines.
 
 ---
 
+## Security & Trust
+
+### MCP Server Security
+
+Plugins include optional MCP (Model Context Protocol) configurations. Before enabling:
+
+- **Review credentials**: Only connect tools you trust
+- **Use environment variables**: Never commit API keys to version control
+- **Test environments**: Be careful with production credentials
+- **Audit configs**: Review `.mcp.json` files before copying
+
+All MCP integrations are marked `optional: true` — only enable what you need.
+
+### Data Privacy
+
+- Skills run locally — no data sent to external servers
+- MCP servers connect only to services you configure
+- No telemetry or tracking in this repository
+
+---
+
+## Official Documentation
+
+- **Claude Code Plugins**: [code.claude.com/docs/en/plugins](https://code.claude.com/docs/en/plugins)
+- **Skills.sh**: [skills.sh](https://skills.sh)
+- **MCP Protocol**: [modelcontextprotocol.io](https://modelcontextprotocol.io)
+
+---
+
 ## Disclaimer
 
 **USE AT YOUR OWN RISK.**
@@ -394,6 +552,7 @@ These skills are provided as educational resources and best-practice guidelines 
 2. **No Liability**: Authors shall not be held liable for any damages or data loss.
 3. **Your Responsibility**: Test in safe environments, maintain backups, review AI actions before execution.
 4. **AI Behavior**: AI agents may interpret skills differently. Always confirm before destructive operations.
+5. **MCP Integrations**: Connecting to external services is at your own risk. Secure your API keys appropriately.
 
 ---
 

@@ -204,6 +204,104 @@
       "license": "MIT",
       "keywords": ["rag", "retrieval", "graphrag", "vector-search", "embeddings", "llm"],
       "category": "RAG & Retrieval"
+    },
+    {
+      "name": "devops-sre",
+      "source": "./plugins/devops-sre",
+      "description": "Full DevOps/SRE plugin with MCP integrations: incident response, runbooks, on-call management, Kubernetes, observability. Connects to Datadog, PagerDuty, AWS. 8 skills + 6 commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["devops", "sre", "incident-response", "kubernetes", "observability", "datadog", "pagerduty", "mcp"],
+      "category": "DevOps & SRE"
+    },
+    {
+      "name": "rag-plugin",
+      "source": "./plugins/rag-architect",
+      "description": "Full RAG plugin with MCP integrations: chunking, hybrid retrieval, GraphRAG, agentic RAG, evaluation. Connects to Pinecone, Weaviate, Qdrant, Neo4j. 7 skills + 3 commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["rag", "retrieval", "pinecone", "weaviate", "neo4j", "graphrag", "mcp"],
+      "category": "AI/ML Engineering"
+    },
+    {
+      "name": "security-guardian",
+      "source": "./plugins/security-guardian",
+      "description": "Full security plugin with MCP integrations: OWASP Top 10, secure code review, vulnerability detection, secrets scanning. Connects to Snyk, Semgrep, Trivy, Vault. 10 skills + 2 commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["security", "owasp", "snyk", "semgrep", "vulnerability", "secrets", "mcp"],
+      "category": "Security"
+    },
+    {
+      "name": "agent-plugin",
+      "source": "./plugins/agent-architect",
+      "description": "Full multi-agent plugin with MCP integrations: LangGraph workflows, supervisor patterns, human-in-loop, A2A protocols. Connects to LangSmith, Redis, PostgreSQL. 13 skills + 2 commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["multi-agent", "langgraph", "langsmith", "orchestration", "human-in-loop", "mcp"],
+      "category": "AI/ML Engineering"
+    },
+    {
+      "name": "developer-toolkit",
+      "source": "./plugins/developer-toolkit",
+      "description": "Full developer plugin with MCP integrations: Git mastery, debugging, code intelligence, AI-assisted development. Connects to GitHub, GitLab, Jira, Sentry. 19 skills + 2 commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["git", "debugging", "github", "jira", "sentry", "code-review", "mcp"],
+      "category": "Developer Tools"
+    },
+    {
+      "name": "hr-people-ops",
+      "source": "./plugins/hr-people-ops",
+      "description": "Full HR/People Ops plugin with MCP integrations: job descriptions, recruiting, performance reviews, onboarding. Connects to Greenhouse, Lever, Workday, BambooHR. 6 skills + 2 commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["hr", "recruiting", "hiring", "performance-review", "onboarding", "greenhouse", "mcp"],
+      "category": "Human Resources"
+    },
+    {
+      "name": "qa-testing",
+      "source": "./plugins/qa-testing",
+      "description": "Full QA/Testing plugin with MCP integrations: test planning, Playwright automation, API testing, performance testing. Connects to TestRail, Xray, BrowserStack, Jira. 6 skills + 3 commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["qa", "testing", "playwright", "testrail", "browserstack", "automation", "mcp"],
+      "category": "Quality Assurance"
     }
   ]
 }
