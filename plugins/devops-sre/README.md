@@ -7,13 +7,18 @@ Complete incident response, observability, reliability engineering, on-call mana
 ## Quick Install
 
 ```bash
-# Install from GitHub
+# Install via Claude Code CLI
+/plugin install latestaiagents/agent-skills/plugins/devops-sre
+
+# Or using npx
 npx skills add latestaiagents/agent-skills/plugins/devops-sre
 
 # Or clone and install locally
 git clone https://github.com/latestaiagents/agent-skills.git
-npx skills add ./agent-skills/plugins/devops-sre
+cd agent-skills && /plugin install ./plugins/devops-sre
 ```
+
+> **Note**: For complete plugin documentation, see the [official Claude Code plugins guide](https://code.claude.com/docs/en/plugins).
 
 ## What's Included
 
@@ -156,6 +161,17 @@ This plugin embeds industry best practices:
 - Claude Code CLI (latest version)
 - Node.js 18+ (for npx)
 - Optional: Access to monitoring/alerting tools for MCP integration
+
+## Security & Trust
+
+This plugin includes MCP server configurations for external tool integrations. Before enabling:
+
+- **Review credentials**: Only add API keys for tools you trust and use
+- **Principle of least privilege**: Use read-only API keys where possible
+- **Audit MCP servers**: Review `.mcp.json` before copying to your config
+- **Environment variables**: Never commit actual credentials to version control
+
+All MCP integrations are marked `optional: true` - the plugin works without them.
 
 ## Contributing
 
