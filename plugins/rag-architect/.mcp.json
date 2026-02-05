@@ -1,0 +1,78 @@
+{
+  "mcpServers": {
+    "pinecone": {
+      "description": "Pinecone vector database for similarity search",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-pinecone"],
+      "env": {
+        "PINECONE_API_KEY": "${PINECONE_API_KEY}",
+        "PINECONE_ENVIRONMENT": "${PINECONE_ENVIRONMENT:-us-east-1}"
+      },
+      "optional": true,
+      "docs": "https://docs.pinecone.io/"
+    },
+    "weaviate": {
+      "description": "Weaviate vector database with hybrid search",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-weaviate"],
+      "env": {
+        "WEAVIATE_URL": "${WEAVIATE_URL:-http://localhost:8080}",
+        "WEAVIATE_API_KEY": "${WEAVIATE_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://weaviate.io/developers/weaviate"
+    },
+    "qdrant": {
+      "description": "Qdrant vector database for high-performance search",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-qdrant"],
+      "env": {
+        "QDRANT_URL": "${QDRANT_URL:-http://localhost:6333}",
+        "QDRANT_API_KEY": "${QDRANT_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://qdrant.tech/documentation/"
+    },
+    "neo4j": {
+      "description": "Neo4j graph database for GraphRAG patterns",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-neo4j"],
+      "env": {
+        "NEO4J_URI": "${NEO4J_URI:-bolt://localhost:7687}",
+        "NEO4J_USER": "${NEO4J_USER:-neo4j}",
+        "NEO4J_PASSWORD": "${NEO4J_PASSWORD}"
+      },
+      "optional": true,
+      "docs": "https://neo4j.com/docs/"
+    },
+    "elasticsearch": {
+      "description": "Elasticsearch for hybrid keyword + vector search",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-elasticsearch"],
+      "env": {
+        "ELASTICSEARCH_URL": "${ELASTICSEARCH_URL:-http://localhost:9200}",
+        "ELASTICSEARCH_API_KEY": "${ELASTICSEARCH_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+    },
+    "openai": {
+      "description": "OpenAI API for embeddings and generation",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-openai"],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://platform.openai.com/docs"
+    }
+  },
+  "setup_instructions": {
+    "quick_start": "Set environment variables for the vector databases and LLM APIs you use.",
+    "pinecone": "Get API key from https://app.pinecone.io/",
+    "weaviate": "Run locally with Docker or use Weaviate Cloud",
+    "qdrant": "Run locally with Docker: docker run -p 6333:6333 qdrant/qdrant",
+    "neo4j": "Run locally: docker run -p 7474:7474 -p 7687:7687 neo4j",
+    "openai": "Get API key from https://platform.openai.com/api-keys"
+  }
+}

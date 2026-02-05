@@ -1,0 +1,28 @@
+{
+  "name": "qa-testing",
+  "version": "1.0.0",
+  "description": "Complete QA and testing toolkit: test strategy, automation patterns, API testing, performance testing, test case design, and bug management for quality engineering.",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/agent-skills",
+  "repository": "https://github.com/latestaiagents/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "qa",
+    "testing",
+    "test-automation",
+    "playwright",
+    "cypress",
+    "api-testing",
+    "performance-testing",
+    "test-cases",
+    "quality-assurance",
+    "e2e-testing"
+  ],
+  "category": "Quality Assurance",
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcp": "./.mcp.json"
+}

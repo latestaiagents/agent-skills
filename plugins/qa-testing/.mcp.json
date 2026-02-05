@@ -1,0 +1,79 @@
+{
+  "mcpServers": {
+    "testrail": {
+      "description": "TestRail for test case management and reporting",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-testrail"],
+      "env": {
+        "TESTRAIL_URL": "${TESTRAIL_URL}",
+        "TESTRAIL_USERNAME": "${TESTRAIL_USERNAME}",
+        "TESTRAIL_API_KEY": "${TESTRAIL_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://support.testrail.com/hc/en-us/articles/7077083596436-API"
+    },
+    "xray": {
+      "description": "Xray for Jira test management",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-xray"],
+      "env": {
+        "XRAY_CLIENT_ID": "${XRAY_CLIENT_ID}",
+        "XRAY_CLIENT_SECRET": "${XRAY_CLIENT_SECRET}"
+      },
+      "optional": true,
+      "docs": "https://docs.getxray.app/display/XRAY/REST+API"
+    },
+    "jira": {
+      "description": "Jira for bug tracking and test integration",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-jira"],
+      "env": {
+        "JIRA_URL": "${JIRA_URL}",
+        "JIRA_EMAIL": "${JIRA_EMAIL}",
+        "JIRA_API_TOKEN": "${JIRA_API_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://developer.atlassian.com/cloud/jira/"
+    },
+    "github": {
+      "description": "GitHub for CI/CD test integration",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://docs.github.com/"
+    },
+    "browserstack": {
+      "description": "BrowserStack for cross-browser testing",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-browserstack"],
+      "env": {
+        "BROWSERSTACK_USERNAME": "${BROWSERSTACK_USERNAME}",
+        "BROWSERSTACK_ACCESS_KEY": "${BROWSERSTACK_ACCESS_KEY}"
+      },
+      "optional": true,
+      "docs": "https://www.browserstack.com/docs/"
+    },
+    "datadog": {
+      "description": "Datadog for test monitoring and synthetics",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-datadog"],
+      "env": {
+        "DD_API_KEY": "${DD_API_KEY}",
+        "DD_APP_KEY": "${DD_APP_KEY}"
+      },
+      "optional": true,
+      "docs": "https://docs.datadoghq.com/api/"
+    }
+  },
+  "setup_instructions": {
+    "quick_start": "Set environment variables for your test management and CI tools.",
+    "testrail": "Get API key from TestRail > My Settings > API Keys",
+    "xray": "Get credentials from Xray Cloud > Settings > API Keys",
+    "jira": "Create API token at https://id.atlassian.com/manage/api-tokens",
+    "browserstack": "Get credentials from BrowserStack > Account > Settings",
+    "datadog": "Get API keys from Datadog > Organization Settings > API Keys"
+  }
+}

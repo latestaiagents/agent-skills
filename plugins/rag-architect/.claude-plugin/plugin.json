@@ -1,0 +1,28 @@
+{
+  "name": "rag-architect",
+  "version": "1.0.0",
+  "description": "Complete RAG (Retrieval-Augmented Generation) toolkit: chunking strategies, hybrid retrieval, GraphRAG, Agentic RAG, Corrective RAG, evaluation, and production deployment patterns.",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/agent-skills",
+  "repository": "https://github.com/latestaiagents/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "rag",
+    "retrieval",
+    "embeddings",
+    "vector-search",
+    "langchain",
+    "llamaindex",
+    "graphrag",
+    "hybrid-search",
+    "semantic-search",
+    "ai-engineering"
+  ],
+  "category": "AI/ML Engineering",
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcp": "./.mcp.json"
+}

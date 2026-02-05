@@ -1,0 +1,28 @@
+{
+  "name": "security-guardian",
+  "version": "1.0.0",
+  "description": "Complete application security toolkit: OWASP Top 10 protection, secure code review, vulnerability detection, secrets scanning, and security best practices for modern applications.",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/agent-skills",
+  "repository": "https://github.com/latestaiagents/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "owasp",
+    "vulnerability",
+    "xss",
+    "sql-injection",
+    "csrf",
+    "jwt",
+    "secrets",
+    "secure-code",
+    "appsec"
+  ],
+  "category": "Security",
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcp": "./.mcp.json"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "hr-people-ops",
+  "version": "1.0.0",
+  "description": "Complete HR and People Operations toolkit: job descriptions, recruiting, performance reviews, onboarding, policy management, and employee engagement for modern workplaces.",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/agent-skills",
+  "repository": "https://github.com/latestaiagents/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "hr",
+    "human-resources",
+    "recruiting",
+    "hiring",
+    "performance-review",
+    "onboarding",
+    "job-description",
+    "people-ops",
+    "employee-engagement",
+    "workplace"
+  ],
+  "category": "Human Resources",
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcp": "./.mcp.json"
+}
