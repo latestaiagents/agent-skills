@@ -1,0 +1,66 @@
+{
+  "mcpServers": {
+    "github": {
+      "description": "GitHub for repository management, PRs, issues",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://docs.github.com/"
+    },
+    "gitlab": {
+      "description": "GitLab for repository management and CI/CD",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-gitlab"],
+      "env": {
+        "GITLAB_TOKEN": "${GITLAB_TOKEN}",
+        "GITLAB_URL": "${GITLAB_URL:-https://gitlab.com}"
+      },
+      "optional": true,
+      "docs": "https://docs.gitlab.com/"
+    },
+    "jira": {
+      "description": "Jira for issue tracking and project management",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-jira"],
+      "env": {
+        "JIRA_URL": "${JIRA_URL}",
+        "JIRA_EMAIL": "${JIRA_EMAIL}",
+        "JIRA_API_TOKEN": "${JIRA_API_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://developer.atlassian.com/cloud/jira/"
+    },
+    "linear": {
+      "description": "Linear for modern issue tracking",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-linear"],
+      "env": {
+        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://developers.linear.app/"
+    },
+    "sentry": {
+      "description": "Sentry for error tracking and debugging",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-sentry"],
+      "env": {
+        "SENTRY_AUTH_TOKEN": "${SENTRY_AUTH_TOKEN}",
+        "SENTRY_ORG": "${SENTRY_ORG}"
+      },
+      "optional": true,
+      "docs": "https://docs.sentry.io/"
+    }
+  },
+  "setup_instructions": {
+    "quick_start": "Set environment variables for your development tools.",
+    "github": "Create token at https://github.com/settings/tokens",
+    "gitlab": "Create token at GitLab > Settings > Access Tokens",
+    "jira": "Create API token at https://id.atlassian.com/manage/api-tokens",
+    "linear": "Create API key at Linear > Settings > API",
+    "sentry": "Create auth token at https://sentry.io/settings/auth-tokens/"
+  }
+}

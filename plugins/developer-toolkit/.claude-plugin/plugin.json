@@ -1,0 +1,28 @@
+{
+  "name": "developer-toolkit",
+  "version": "1.0.0",
+  "description": "Complete developer productivity toolkit: Git mastery, debugging skills, code intelligence, AI-assisted development, and best practices for modern software engineering.",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/agent-skills",
+  "repository": "https://github.com/latestaiagents/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "debugging",
+    "code-review",
+    "refactoring",
+    "testing",
+    "developer-tools",
+    "productivity",
+    "best-practices",
+    "ai-coding",
+    "software-engineering"
+  ],
+  "category": "Developer Tools",
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcp": "./.mcp.json"
+}

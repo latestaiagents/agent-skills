@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "snyk": {
+      "description": "Snyk for dependency vulnerability scanning",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-snyk"],
+      "env": {
+        "SNYK_TOKEN": "${SNYK_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://docs.snyk.io/"
+    },
+    "github-security": {
+      "description": "GitHub Security features - Dependabot, code scanning",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://docs.github.com/en/code-security"
+    },
+    "semgrep": {
+      "description": "Semgrep for static analysis and security rules",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-semgrep"],
+      "env": {
+        "SEMGREP_APP_TOKEN": "${SEMGREP_APP_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://semgrep.dev/docs/"
+    },
+    "trivy": {
+      "description": "Trivy for container and IaC security scanning",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-trivy"],
+      "env": {},
+      "optional": true,
+      "docs": "https://aquasecurity.github.io/trivy/"
+    },
+    "vault": {
+      "description": "HashiCorp Vault for secrets management",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-vault"],
+      "env": {
+        "VAULT_ADDR": "${VAULT_ADDR:-http://localhost:8200}",
+        "VAULT_TOKEN": "${VAULT_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://developer.hashicorp.com/vault/docs"
+    }
+  },
+  "setup_instructions": {
+    "quick_start": "Set environment variables for security tools you use.",
+    "snyk": "Get token from https://app.snyk.io/account",
+    "semgrep": "Get token from https://semgrep.dev/manage/settings/tokens",
+    "trivy": "Install locally: brew install trivy (no auth needed)",
+    "vault": "Run locally: docker run -p 8200:8200 vault server -dev"
+  }
+}

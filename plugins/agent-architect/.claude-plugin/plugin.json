@@ -1,0 +1,28 @@
+{
+  "name": "agent-architect",
+  "version": "1.0.0",
+  "description": "Complete multi-agent systems toolkit: LangGraph workflows, agent orchestration patterns, supervisor hierarchies, human-in-the-loop, A2A protocols, memory systems, and production deployment.",
+  "author": {
+    "name": "latestaiagents",
+    "email": "hardikmer@outlook.com"
+  },
+  "homepage": "https://github.com/latestaiagents/agent-skills",
+  "repository": "https://github.com/latestaiagents/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "multi-agent",
+    "langgraph",
+    "agent-orchestration",
+    "supervisor-pattern",
+    "human-in-loop",
+    "a2a",
+    "agent-memory",
+    "llm-agents",
+    "agentic-ai",
+    "workflow-automation"
+  ],
+  "category": "AI/ML Engineering",
+  "skills": "./skills",
+  "commands": "./commands",
+  "mcp": "./.mcp.json"
+}

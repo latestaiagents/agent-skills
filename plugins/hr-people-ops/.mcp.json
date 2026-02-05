@@ -1,0 +1,76 @@
+{
+  "mcpServers": {
+    "greenhouse": {
+      "description": "Greenhouse ATS for recruiting and applicant tracking",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-greenhouse"],
+      "env": {
+        "GREENHOUSE_API_KEY": "${GREENHOUSE_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://developers.greenhouse.io/"
+    },
+    "lever": {
+      "description": "Lever ATS for recruiting workflows",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-lever"],
+      "env": {
+        "LEVER_API_KEY": "${LEVER_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://hire.lever.co/developer/documentation"
+    },
+    "workday": {
+      "description": "Workday HCM for employee data and workflows",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-workday"],
+      "env": {
+        "WORKDAY_TENANT": "${WORKDAY_TENANT}",
+        "WORKDAY_CLIENT_ID": "${WORKDAY_CLIENT_ID}",
+        "WORKDAY_CLIENT_SECRET": "${WORKDAY_CLIENT_SECRET}"
+      },
+      "optional": true,
+      "docs": "https://developer.workday.com/"
+    },
+    "bamboohr": {
+      "description": "BambooHR for employee records and time-off",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-bamboohr"],
+      "env": {
+        "BAMBOOHR_SUBDOMAIN": "${BAMBOOHR_SUBDOMAIN}",
+        "BAMBOOHR_API_KEY": "${BAMBOOHR_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://documentation.bamboohr.com/reference"
+    },
+    "slack": {
+      "description": "Slack for employee communications and announcements",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://api.slack.com/docs"
+    },
+    "google-calendar": {
+      "description": "Google Calendar for interview scheduling",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-google-calendar"],
+      "env": {
+        "GOOGLE_CLIENT_ID": "${GOOGLE_CLIENT_ID}",
+        "GOOGLE_CLIENT_SECRET": "${GOOGLE_CLIENT_SECRET}"
+      },
+      "optional": true,
+      "docs": "https://developers.google.com/calendar"
+    }
+  },
+  "setup_instructions": {
+    "quick_start": "Set environment variables for your HR systems.",
+    "greenhouse": "Get API key from Greenhouse > Configure > Dev Center > API Credentials",
+    "lever": "Get API key from Lever > Settings > Integrations > API",
+    "workday": "Contact your Workday admin for API credentials",
+    "bamboohr": "Get API key from BambooHR > Account > API Keys",
+    "slack": "Create bot at https://api.slack.com/apps"
+  }
+}

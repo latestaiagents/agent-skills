@@ -1,0 +1,63 @@
+{
+  "mcpServers": {
+    "langsmith": {
+      "description": "LangSmith for agent tracing and debugging",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-langsmith"],
+      "env": {
+        "LANGCHAIN_API_KEY": "${LANGCHAIN_API_KEY}",
+        "LANGCHAIN_TRACING_V2": "true",
+        "LANGCHAIN_PROJECT": "${LANGCHAIN_PROJECT:-default}"
+      },
+      "optional": true,
+      "docs": "https://docs.smith.langchain.com/"
+    },
+    "redis": {
+      "description": "Redis for agent state and memory persistence",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-redis"],
+      "env": {
+        "REDIS_URL": "${REDIS_URL:-redis://localhost:6379}"
+      },
+      "optional": true,
+      "docs": "https://redis.io/docs/"
+    },
+    "postgres": {
+      "description": "PostgreSQL for durable agent checkpointing",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-postgres"],
+      "env": {
+        "DATABASE_URL": "${DATABASE_URL}"
+      },
+      "optional": true,
+      "docs": "https://www.postgresql.org/docs/"
+    },
+    "openai": {
+      "description": "OpenAI API for agent LLM calls",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-openai"],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://platform.openai.com/docs"
+    },
+    "slack": {
+      "description": "Slack for human-in-the-loop notifications",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://api.slack.com/docs"
+    }
+  },
+  "setup_instructions": {
+    "quick_start": "Set environment variables for tools you use with your agents.",
+    "langsmith": "Get API key from https://smith.langchain.com/settings",
+    "redis": "Run locally: docker run -p 6379:6379 redis",
+    "postgres": "Run locally: docker run -p 5432:5432 -e POSTGRES_PASSWORD=pass postgres",
+    "openai": "Get API key from https://platform.openai.com/api-keys"
+  }
+}
