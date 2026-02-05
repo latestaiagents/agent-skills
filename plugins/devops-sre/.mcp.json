@@ -1,0 +1,95 @@
+{
+  "mcpServers": {
+    "datadog": {
+      "description": "Query metrics, logs, traces, monitors, and incidents from Datadog",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-datadog"],
+      "env": {
+        "DD_API_KEY": "${DATADOG_API_KEY}",
+        "DD_APP_KEY": "${DATADOG_APP_KEY}",
+        "DD_SITE": "${DATADOG_SITE:-datadoghq.com}"
+      },
+      "optional": true,
+      "docs": "https://docs.datadoghq.com/bits_ai/mcp_server/"
+    },
+    "pagerduty": {
+      "description": "Manage incidents, on-call schedules, and escalations in PagerDuty",
+      "command": "npx",
+      "args": ["-y", "mcp-pagerduty"],
+      "env": {
+        "PAGERDUTY_API_KEY": "${PAGERDUTY_API_KEY}"
+      },
+      "optional": true,
+      "docs": "https://github.com/naveen09/mcp_pagerduty"
+    },
+    "aws-cloudwatch": {
+      "description": "Access AWS CloudWatch logs, metrics, and alarms",
+      "command": "npx",
+      "args": ["-y", "cloudwatch-logs-mcp"],
+      "env": {
+        "AWS_REGION": "${AWS_REGION:-us-east-1}",
+        "AWS_ACCESS_KEY_ID": "${AWS_ACCESS_KEY_ID}",
+        "AWS_SECRET_ACCESS_KEY": "${AWS_SECRET_ACCESS_KEY}"
+      },
+      "optional": true,
+      "docs": "https://github.com/serkanh/cloudwatch-logs-mcp"
+    },
+    "kubernetes": {
+      "description": "Interact with Kubernetes clusters - pods, deployments, services",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-kubernetes"],
+      "env": {
+        "KUBECONFIG": "${KUBECONFIG:-~/.kube/config}"
+      },
+      "optional": true,
+      "docs": "https://modelcontextprotocol.io/servers/kubernetes"
+    },
+    "github": {
+      "description": "Access repositories, PRs, issues, and deployments",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://modelcontextprotocol.io/servers/github"
+    },
+    "slack": {
+      "description": "Post incident updates and communicate with team",
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
+      },
+      "optional": true,
+      "docs": "https://modelcontextprotocol.io/servers/slack"
+    },
+    "prometheus": {
+      "description": "Query Prometheus metrics and alerts",
+      "command": "npx",
+      "args": ["-y", "mcp-prometheus"],
+      "env": {
+        "PROMETHEUS_URL": "${PROMETHEUS_URL}"
+      },
+      "optional": true
+    },
+    "terraform": {
+      "description": "Manage infrastructure as code with Terraform",
+      "command": "npx",
+      "args": ["-y", "mcp-terraform"],
+      "env": {
+        "TF_WORKSPACE": "${TF_WORKSPACE:-default}"
+      },
+      "optional": true
+    }
+  },
+  "setup_instructions": {
+    "quick_start": "Set environment variables for the tools you use. All connectors are optional.",
+    "datadog": "Get API keys from https://app.datadoghq.com/organization-settings/api-keys",
+    "pagerduty": "Get API key from https://support.pagerduty.com/main/docs/api-access-keys",
+    "aws": "Configure AWS credentials via 'aws configure' or environment variables",
+    "kubernetes": "Ensure kubectl is configured with your cluster",
+    "github": "Create token at https://github.com/settings/tokens with repo scope",
+    "slack": "Create Slack app at https://api.slack.com/apps with chat:write scope"
+  }
+}
