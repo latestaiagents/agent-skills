@@ -1,6 +1,6 @@
 # Agent Skills by latestaiagents
 
-**67 professional skills + 7 full-featured plugins for AI coding agents** — organized by audience so you can find exactly what you need.
+**94 professional skills + 7 full-featured plugins for AI coding agents** — organized by audience so you can find exactly what you need. Now covering MCP, Claude 4.6 features, Claude Agent SDK, skills authoring, and evals.
 
 Works with **Claude Code**, **Claude Cowork**, Cursor, Codex, Windsurf, and [35+ other AI agents](https://skills.sh).
 
@@ -223,6 +223,94 @@ npx skills add latestaiagents/agent-skills/skills/security --all
 | `csrf-protection` | Cross-site request forgery prevention |
 | `secure-headers` | HTTP security headers (CSP, HSTS, etc.) |
 | `jwt-security` | Secure JWT implementation |
+
+---
+
+### Trending in 2026 — 27 new skills
+
+Five fresh suites covering the highest-leverage topics of 2026: the Model Context Protocol, Claude 4.6's new capabilities, the Claude Agent SDK, meta-skills for authoring, and eval engineering.
+
+#### MCP Mastery (7 skills)
+
+> Build and consume Model Context Protocol servers that Claude Desktop, Claude Code, Cursor, ChatGPT, and the Agent SDK all speak.
+
+```bash
+npx skills add latestaiagents/agent-skills/skills/mcp-mastery --all
+```
+
+| Skill | What It Does |
+|-------|--------------|
+| `mcp-server-authoring` | Build production MCP servers in TypeScript or Python |
+| `mcp-client-integration` | Wire MCP into Claude Desktop, Claude Code, Cursor, custom apps |
+| `mcp-tool-design` | Tool schemas that agents actually pick correctly |
+| `mcp-resource-patterns` | Tool vs resource vs prompt; URI templates; subscriptions |
+| `mcp-auth-oauth` | OAuth 2.1 + PKCE + Dynamic Client Registration for remote MCP |
+| `mcp-transport-stdio-http` | stdio vs Streamable HTTP; sessions, resumability, scaling |
+| `mcp-security-sandboxing` | Threat model, sandboxing, rate limits, audit, injection defense |
+
+#### Claude 4.6 Features (6 skills)
+
+> Get the most out of Claude 4.6's newest capabilities.
+
+```bash
+npx skills add latestaiagents/agent-skills/skills/claude-4-6-features --all
+```
+
+| Skill | What It Does |
+|-------|--------------|
+| `long-context-1m` | Use the 1M context window affordably (with caching) |
+| `extended-thinking` | Budget tokens, interleaved thinking, when it helps |
+| `memory-tool` | Cross-session persistent agent memory |
+| `code-execution` | Run Python sandboxed; data analysis, charts, verification |
+| `prompt-caching-ttl` | 5m/1h TTL caching; breakpoints; common mistakes |
+| `computer-use` | Browser/desktop automation; safety; when NOT to use |
+
+#### Claude Agent SDK (5 skills)
+
+> Build production agents with less plumbing.
+
+```bash
+npx skills add latestaiagents/agent-skills/skills/claude-agent-sdk --all
+```
+
+| Skill | What It Does |
+|-------|--------------|
+| `agent-sdk-quickstart` | First agent in TS or Python; tools, hooks, permissions |
+| `managed-agents-api` | `/v1/agents` + `/v1/sessions` server-side runtime |
+| `session-lifecycle` | Create, resume, fork, compact; when to start fresh |
+| `sub-agent-delegation` | Parallel sub-agents for research and specialization |
+| `agent-sdk-streaming` | Stream text, thinking, and tool activity to UIs |
+
+#### Skills Authoring (4 skills — meta!)
+
+> Build skills that actually activate and help users.
+
+```bash
+npx skills add latestaiagents/agent-skills/skills/skills-authoring --all
+```
+
+| Skill | What It Does |
+|-------|--------------|
+| `skill-frontmatter` | Write YAML that makes skills fire reliably |
+| `skill-activation-patterns` | Design triggers; disambiguate overlapping skills |
+| `progressive-disclosure` | Structure SKILL.md for the model's attention |
+| `skill-testing` | CI-gated validation, lint, and activation tests |
+
+#### Evals (5 skills)
+
+> Measure LLM quality rigorously; catch regressions before users do.
+
+```bash
+npx skills add latestaiagents/agent-skills/skills/evals --all
+```
+
+| Skill | What It Does |
+|-------|--------------|
+| `llm-as-judge` | Rubrics, pairwise, calibration, bias mitigation |
+| `eval-dataset-design` | Coverage, stratification, label quality, contamination |
+| `regression-evals` | Significance testing, CI gating, baseline management |
+| `golden-set-maintenance` | Curate 20-100 must-not-regress cases |
+| `cost-quality-tradeoff` | Pareto analysis; when a premium model pays off |
 
 ---
 

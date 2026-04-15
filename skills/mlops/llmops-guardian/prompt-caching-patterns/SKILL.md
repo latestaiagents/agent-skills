@@ -37,7 +37,7 @@ This can be many thousands of tokens that you want to cache.
 
 async function queryWithCache(userQuestion: string) {
   const response = await client.messages.create({
-    model: 'claude-3-sonnet-20240229',
+    model: 'claude-sonnet-4-6',
     max_tokens: 1024,
     system: [
       {

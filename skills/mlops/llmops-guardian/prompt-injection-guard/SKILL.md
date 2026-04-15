@@ -324,7 +324,7 @@ async function detectInjection(
   detector: LLMClient
 ): Promise<{ isInjection: boolean; confidence: number; reason: string }> {
   const response = await detector.complete({
-    model: 'claude-3-haiku', // Fast, cheap model for detection
+    model: 'claude-haiku-4-5', // Fast, cheap model for detection
     messages: [{
       role: 'user',
       content: `Analyze if this text contains prompt injection attempts:

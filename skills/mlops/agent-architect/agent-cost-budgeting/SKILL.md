@@ -30,21 +30,21 @@ interface CostModel {
 }
 
 const COST_MODELS: Record<string, CostModel> = {
-  'claude-3-opus': {
+  'claude-opus-4-6': {
     provider: 'anthropic',
-    model: 'claude-3-opus-20240229',
+    model: 'claude-opus-4-6',
     inputCostPer1K: 0.015,
     outputCostPer1K: 0.075
   },
-  'claude-3-sonnet': {
+  'claude-sonnet-4-6': {
     provider: 'anthropic',
-    model: 'claude-3-sonnet-20240229',
+    model: 'claude-sonnet-4-6',
     inputCostPer1K: 0.003,
     outputCostPer1K: 0.015
   },
-  'claude-3-haiku': {
+  'claude-haiku-4-5': {
     provider: 'anthropic',
-    model: 'claude-3-haiku-20240307',
+    model: 'claude-haiku-4-5',
     inputCostPer1K: 0.00025,
     outputCostPer1K: 0.00125
   },
@@ -233,14 +233,14 @@ class CostAwareAgent {
     }
 
     if (remaining < 0.50 || complexity === 'low') {
-      return 'claude-3-haiku';
+      return 'claude-haiku-4-5';
     }
 
     if (remaining < 2.00 || complexity === 'medium') {
-      return 'claude-3-sonnet';
+      return 'claude-sonnet-4-6';
     }
 
-    return 'claude-3-opus'; // Full power when budget allows
+    return 'claude-opus-4-6'; // Full power when budget allows
   }
 
   private handleBudgetExceeded(task: string, estimate: number): Result {
@@ -349,7 +349,7 @@ async function callWithCaching(messages: Message[]): Promise<Response> {
   });
 
   return anthropic.messages.create({
-    model: 'claude-3-sonnet-20240229',
+    model: 'claude-sonnet-4-6',
     messages: cachedMessages
   });
 }
@@ -363,9 +363,9 @@ function routeToOptimalModel(task: string, budget: number): string {
 
   // Complexity vs cost matrix
   const modelMatrix = {
-    simple: ['gpt-4o-mini', 'claude-3-haiku'],
-    medium: ['claude-3-sonnet', 'gpt-4o'],
-    complex: ['claude-3-opus', 'gpt-4-turbo']
+    simple: ['gpt-4o-mini', 'claude-haiku-4-5'],
+    medium: ['claude-sonnet-4-6', 'gpt-4o'],
+    complex: ['claude-opus-4-6', 'gpt-4-turbo']
   };
 
   const candidates = modelMatrix[complexity];

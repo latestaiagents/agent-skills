@@ -163,7 +163,7 @@ const fallbackChain = new FallbackChain({
 // Primary: Claude Sonnet
 fallbackChain.addProvider({
   name: 'anthropic-sonnet',
-  model: 'claude-3.5-sonnet-20241022',
+  model: 'claude-sonnet-4-6',
   client: new AnthropicClient(process.env.ANTHROPIC_API_KEY!),
   priority: 1,
   healthCheck: () => anthropicHealthCheck()
@@ -181,7 +181,7 @@ fallbackChain.addProvider({
 // Fallback 2: Claude Haiku (cheaper, faster)
 fallbackChain.addProvider({
   name: 'anthropic-haiku',
-  model: 'claude-3-haiku-20240307',
+  model: 'claude-haiku-4-5',
   client: new AnthropicClient(process.env.ANTHROPIC_API_KEY!),
   priority: 3,
   healthCheck: () => anthropicHealthCheck()
@@ -210,9 +210,9 @@ interface DegradationLevel {
 }
 
 const degradationLevels: DegradationLevel[] = [
-  { level: 0, model: 'claude-3-opus', maxTokens: 4000, features: ['full', 'reasoning', 'creativity'] },
-  { level: 1, model: 'claude-3.5-sonnet', maxTokens: 2000, features: ['full', 'reasoning'] },
-  { level: 2, model: 'claude-3-haiku', maxTokens: 1000, features: ['basic'] },
+  { level: 0, model: 'claude-opus-4-6', maxTokens: 4000, features: ['full', 'reasoning', 'creativity'] },
+  { level: 1, model: 'claude-sonnet-4-6', maxTokens: 2000, features: ['full', 'reasoning'] },
+  { level: 2, model: 'claude-haiku-4-5', maxTokens: 1000, features: ['basic'] },
   { level: 3, model: 'gpt-4o-mini', maxTokens: 500, features: ['minimal'] },
 ];
 

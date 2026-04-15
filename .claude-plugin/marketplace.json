@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Professional skills and plugins for AI coding agents — organized by audience for easy discovery.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "latestaiagents-full",
       "source": "./",
-      "description": "Complete suite: 67 skills + 10 slash commands. Everything you need for professional AI-assisted development.",
-      "version": "1.0.0",
+      "description": "Complete suite: 94 skills + 10 slash commands. Everything you need for professional AI-assisted development in 2026, including MCP, Claude 4.6 features, Claude Agent SDK, skills authoring, and evals.",
+      "version": "1.1.0",
       "author": {
         "name": "latestaiagents"
       },
@@ -288,6 +288,76 @@
       "license": "MIT",
       "keywords": ["hr", "recruiting", "hiring", "performance-review", "onboarding", "greenhouse", "mcp"],
       "category": "Human Resources"
+    },
+    {
+      "name": "mcp-mastery",
+      "source": "./skills/mcp-mastery",
+      "description": "Build and consume MCP servers the right way. Server authoring, client integration, tool design, OAuth 2.1, transports, and security. 7 skills for the Model Context Protocol era.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["mcp", "model-context-protocol", "mcp-server", "mcp-client", "oauth", "tools", "integration"],
+      "category": "AI Integration"
+    },
+    {
+      "name": "claude-4-6-features",
+      "source": "./skills/claude-4-6-features",
+      "description": "Master Claude 4.6 capabilities: 1M context, extended thinking, memory tool, code execution, prompt caching TTLs, computer use. 6 skills for the newest model features.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["claude", "claude-4-6", "extended-thinking", "memory-tool", "prompt-caching", "computer-use", "long-context"],
+      "category": "AI Models"
+    },
+    {
+      "name": "claude-agent-sdk",
+      "source": "./skills/claude-agent-sdk",
+      "description": "Build agents with the Claude Agent SDK. Quickstart, Managed Agents API, session lifecycle, sub-agent delegation, streaming. 5 skills for production agent development.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["claude-agent-sdk", "managed-agents", "sub-agents", "sessions", "streaming", "agent-framework"],
+      "category": "AI Architecture"
+    },
+    {
+      "name": "skills-authoring",
+      "source": "./skills/skills-authoring",
+      "description": "Meta-skill suite: author high-quality agent skills. Frontmatter, activation patterns, progressive disclosure, testing. 4 skills for skill builders.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["skills", "skill-authoring", "skill-activation", "skill-testing", "skill-design"],
+      "category": "Meta"
+    },
+    {
+      "name": "evals",
+      "source": "./skills/evals",
+      "description": "Measure and improve LLM quality. LLM-as-judge, eval dataset design, regression evals, golden set maintenance, cost/quality tradeoff. 5 skills for serious eval engineering.",
+      "version": "1.0.0",
+      "author": {
+        "name": "latestaiagents"
+      },
+      "homepage": "https://github.com/latestaiagents/agent-skills",
+      "repository": "https://github.com/latestaiagents/agent-skills",
+      "license": "MIT",
+      "keywords": ["evals", "llm-judge", "regression-testing", "golden-set", "benchmark", "cost-quality"],
+      "category": "Quality Assurance"
     },
     {
       "name": "qa-testing",

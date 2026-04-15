@@ -99,9 +99,9 @@ function assessComplexity(task: Task): Complexity {
 
 function selectModel(complexity: Complexity): string {
   const modelMap = {
-    simple: 'claude-3-haiku',     // $0.25/$1.25 per 1M
-    medium: 'claude-3.5-sonnet',  // $3/$15 per 1M
-    complex: 'claude-3-opus'      // $15/$75 per 1M
+    simple: 'claude-haiku-4-5',     // $0.25/$1.25 per 1M
+    medium: 'claude-sonnet-4-6',  // $3/$15 per 1M
+    complex: 'claude-opus-4-6'      // $15/$75 per 1M
   };
 
   return modelMap[complexity];
@@ -121,9 +121,9 @@ interface ModelOption {
 }
 
 const models: ModelOption[] = [
-  { name: 'claude-3-opus', provider: 'anthropic', inputCostPer1K: 0.015, outputCostPer1K: 0.075, qualityScore: 0.98, avgLatencyMs: 1200 },
-  { name: 'claude-3.5-sonnet', provider: 'anthropic', inputCostPer1K: 0.003, outputCostPer1K: 0.015, qualityScore: 0.95, avgLatencyMs: 600 },
-  { name: 'claude-3-haiku', provider: 'anthropic', inputCostPer1K: 0.00025, outputCostPer1K: 0.00125, qualityScore: 0.85, avgLatencyMs: 300 },
+  { name: 'claude-opus-4-6', provider: 'anthropic', inputCostPer1K: 0.015, outputCostPer1K: 0.075, qualityScore: 0.98, avgLatencyMs: 1200 },
+  { name: 'claude-sonnet-4-6', provider: 'anthropic', inputCostPer1K: 0.003, outputCostPer1K: 0.015, qualityScore: 0.95, avgLatencyMs: 600 },
+  { name: 'claude-haiku-4-5', provider: 'anthropic', inputCostPer1K: 0.00025, outputCostPer1K: 0.00125, qualityScore: 0.85, avgLatencyMs: 300 },
   { name: 'gpt-4o', provider: 'openai', inputCostPer1K: 0.005, outputCostPer1K: 0.015, qualityScore: 0.94, avgLatencyMs: 550 },
   { name: 'gpt-4o-mini', provider: 'openai', inputCostPer1K: 0.00015, outputCostPer1K: 0.0006, qualityScore: 0.82, avgLatencyMs: 300 },
 ];
@@ -171,12 +171,12 @@ const batchModel = selectForLatency(2000, 0.95); // Sonnet or Opus
 type TaskType = 'code' | 'creative' | 'analysis' | 'extraction' | 'chat' | 'classification';
 
 const taskModelMap: Record<TaskType, string[]> = {
-  code: ['claude-3.5-sonnet', 'gpt-4o', 'claude-3-opus'],
-  creative: ['claude-3-opus', 'gpt-4', 'claude-3.5-sonnet'],
-  analysis: ['claude-3-opus', 'o1', 'claude-3.5-sonnet'],
-  extraction: ['claude-3-haiku', 'gpt-4o-mini', 'claude-3.5-sonnet'],
-  chat: ['claude-3.5-sonnet', 'gpt-4o', 'claude-3-haiku'],
-  classification: ['claude-3-haiku', 'gpt-4o-mini', 'claude-3.5-sonnet']
+  code: ['claude-sonnet-4-6', 'gpt-4o', 'claude-opus-4-6'],
+  creative: ['claude-opus-4-6', 'gpt-4', 'claude-sonnet-4-6'],
+  analysis: ['claude-opus-4-6', 'o1', 'claude-sonnet-4-6'],
+  extraction: ['claude-haiku-4-5', 'gpt-4o-mini', 'claude-sonnet-4-6'],
+  chat: ['claude-sonnet-4-6', 'gpt-4o', 'claude-haiku-4-5'],
+  classification: ['claude-haiku-4-5', 'gpt-4o-mini', 'claude-sonnet-4-6']
 };
 
 function selectForTaskType(taskType: TaskType, budget: 'low' | 'medium' | 'high'): string {
@@ -201,13 +201,13 @@ interface FallbackChain {
 
 const chains: Record<string, FallbackChain> = {
   highQuality: {
-    primary: 'claude-3-opus',
-    fallbacks: ['claude-3.5-sonnet', 'gpt-4o', 'claude-3-haiku'],
+    primary: 'claude-opus-4-6',
+    fallbacks: ['claude-sonnet-4-6', 'gpt-4o', 'claude-haiku-4-5'],
     retryConfig: { maxRetries: 3, backoffMs: 1000 }
   },
   costEffective: {
-    primary: 'claude-3-haiku',
-    fallbacks: ['gpt-4o-mini', 'claude-3.5-sonnet'],
+    primary: 'claude-haiku-4-5',
+    fallbacks: ['gpt-4o-mini', 'claude-sonnet-4-6'],
     retryConfig: { maxRetries: 2, backoffMs: 500 }
   }
 };

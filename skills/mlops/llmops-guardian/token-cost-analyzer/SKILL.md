@@ -192,8 +192,8 @@ function generateCostReport(
   const opportunities: string[] = [];
 
   // Check for expensive model usage on simple tasks
-  const haiku = byModel.get('claude-3-haiku') || 0;
-  const opus = byModel.get('claude-3-opus') || 0;
+  const haiku = byModel.get('claude-haiku-4-5') || 0;
+  const opus = byModel.get('claude-opus-4-6') || 0;
   if (opus > haiku * 10) {
     opportunities.push('Consider using Haiku for simpler tasks - Opus usage is 10x higher');
   }
@@ -250,8 +250,8 @@ function selectCostEffectiveModel(
 ): string {
   const modelMap = {
     simple: 'gpt-4o-mini',    // $0.15/$0.60 per 1M
-    medium: 'claude-3-haiku', // $0.25/$1.25 per 1M
-    complex: 'claude-3.5-sonnet' // $3/$15 per 1M
+    medium: 'claude-haiku-4-5', // $0.25/$1.25 per 1M
+    complex: 'claude-sonnet-4-6' // $3/$15 per 1M
   };
 
   return modelMap[complexity];
@@ -301,7 +301,7 @@ Respond in under 100 words. Use bullet points.
 
 // Or use max_tokens parameter
 const response = await client.messages.create({
-  model: 'claude-3-haiku',
+  model: 'claude-haiku-4-5',
   max_tokens: 500, // Limit output
   messages: [{ role: 'user', content: prompt }]
 });
@@ -312,7 +312,7 @@ const response = await client.messages.create({
 ```typescript
 // Use Anthropic prompt caching
 const response = await client.messages.create({
-  model: 'claude-3-sonnet',
+  model: 'claude-sonnet-4-6',
   messages: [{
     role: 'user',
     content: [
